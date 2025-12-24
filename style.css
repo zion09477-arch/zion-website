@@ -2,78 +2,135 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 body {
-  background: radial-gradient(circle at top, #0b1220, #020617);
+  background: #020617;
+  color: #e5e7eb;
   min-height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  color: #e5e7eb;
+  align-items: center;
+  padding: 20px;
 }
 
 .card {
-  background: rgba(15, 23, 42, 0.9);
-  border-radius: 16px;
-  padding: 40px;
-  width: 420px;
+  background: #0f172a;
+  padding: 40px 30px;
+  border-radius: 15px;
+  width: 90vw;       /* scales with viewport width */
+  max-width: 450px;  /* maximum width for desktop */
+  min-width: 300px;  /* minimum width for small phones */
   text-align: center;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
 }
 
 .badge {
-  display: inline-block;
   background: #facc15;
-  color: #000;
-  font-size: 12px;
+  color: black;
   padding: 6px 14px;
   border-radius: 999px;
-  margin-bottom: 20px;
-  font-weight: 600;
+  font-size: 12px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
 }
 
 h1 {
-  font-size: 32px;
-  margin-bottom: 10px;
+  font-size: 1.8rem;
 }
 
-.subtitle {
-  color: #94a3b8;
-  margin-bottom: 20px;
+h2 {
+  font-size: 1.3rem;
+  margin-top: 15px;
 }
 
-.divider {
-  height: 1px;
-  background: #334155;
-  margin: 25px 0;
+p {
+  font-size: 1rem;
+  margin: 8px 0;
 }
 
-.section-title {
-  font-size: 14px;
-  color: #94a3b8;
-  margin-bottom: 10px;
+ul {
+  list-style: none;
+  margin: 10px 0;
+  padding: 0;
 }
 
-.tags {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.tag {
-  padding: 6px 14px;
-  border-radius: 999px;
-  font-size: 13px;
+ul li {
   background: #1e293b;
-  color: #e5e7eb;
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 20px;
+  margin: 4px;
+  font-size: 0.9rem;
 }
 
-.footer {
-  margin-top: 25px;
-  font-size: 13px;
-  color: #64748b;
+a {
+  color: #facc15;
+  text-decoration: none;
+}
+
+/* Fully responsive adjustments for small screens */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .card {
+    padding: 30px 15px;
+  }
+
+  .profile-img {
+    width: 140px;
+    height: 140px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+
+  ul li {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .card {
+    width: 95vw; /* almost full width on very small phones */
+  }
+
+  .profile-img {
+    width: 130px;
+    height: 130px;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
 }
