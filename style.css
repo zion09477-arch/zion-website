@@ -19,12 +19,11 @@ body {
   background: #0f172a;
   padding: 40px 30px;
   border-radius: 15px;
-  width: 90vw;       /* scales with viewport width */
-  max-width: 450px;  /* max width for desktop */
-  min-width: 300px;  /* min width for small phones */
+  width: 90vw;       
+  max-width: 450px;  
+  min-width: 300px;  
   text-align: left;  
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  position: relative; /* for top-right image */
   transition: all 0.3s ease;
 }
 
@@ -38,27 +37,9 @@ body {
   margin-bottom: 15px;
 }
 
-/* Top-right image */
-.top-right-img {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 10px;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-
-.profile-img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin-bottom: 15px;
-  object-fit: cover;
-}
-
 h1 {
   font-size: 1.8rem;
+  margin-bottom: 10px;
 }
 
 h2 {
@@ -101,18 +82,6 @@ a {
     padding: 30px 15px;
   }
 
-  .profile-img {
-    width: 140px;
-    height: 140px;
-  }
-
-  .top-right-img {
-    width: 60px;
-    height: 60px;
-    top: 15px;
-    right: 15px;
-  }
-
   h1 {
     font-size: 2rem;
   }
@@ -134,18 +103,6 @@ a {
 @media (max-width: 400px) {
   .card {
     width: 95vw;
-  }
-
-  .profile-img {
-    width: 130px;
-    height: 130px;
-  }
-
-  .top-right-img {
-    width: 50px;
-    height: 50px;
-    top: 10px;
-    right: 10px;
   }
 
   h1 {
