@@ -419,3 +419,43 @@ header .nav a:hover {
 .nav .dropdown:hover .dropdown-content {
   display: block;
 }
+
+/* Make everything fit the screen */
+* {
+  box-sizing: border-box;
+}
+
+/* Images should scale on phones */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Cards / sections */
+.card {
+  width: 90%;
+  max-width: 400px;
+  margin: 15px auto;
+  padding: 15px;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
